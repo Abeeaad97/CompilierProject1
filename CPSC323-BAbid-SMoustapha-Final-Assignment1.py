@@ -30,38 +30,35 @@ statetable = [
 ]
 
 
-# A series of tests that checks what the current state is and what the passed character state
-# is to determine what coordinates should be retrieved from the state table
-
 def testChar(char, state):
     # tests what the current state is and what the passed character state is to find what what should be retrieved
     # from the state table
-    currentState = state
+    currState = state
     if char.isalpha():  # checks for alphabetic characters
-        currentState = statetable[currentState][0]
-        return currentState
+        currState = statetable[currState][0]
+        return currState
 
     elif char.isdigit() or (char == "$"):  # checks for a digit or a $
-        currentState = statetable[currentState][1]
-        return currentState
+        currState = statetable[currState][1]
+        return currState
     elif char == "!":  # checks check for "!"
-        currentState = statetable[currentState][2]
-        return currentState
+        currState = statetable[currState][2]
+        return currState
     elif char == ".":  # checks for "."
-        currentState = statetable[currentState][4]
-        return currentState
+        currState = statetable[currState][4]
+        return currState
     elif char.isspace():  # checks if the character is a " "
-        currentState = statetable[currentState][6]
-        return currentState
+        currState = statetable[currState][6]
+        return currState
     else:
         if (char in operators) or (
                 char.isspace()):  # searches if character is an operator or its a space
-            currentState = statetable[currentState][5]
-            return currentState
+            currState = statetable[currState][5]
+            return currState
         elif (char in separator) or (
                 char.isspace()):  # checks if character is a separator or its a space
-            currentState = statetable[currentState][3]
-            return currentState
+            currState = statetable[currState][3]
+            return currState
 
 
 def showTemp(temp, output):  # Decides if token is an integer or float
@@ -108,36 +105,36 @@ def main():
         # DIFFERENT FILE TYPE
 
         temp = " "
-        currentstate = 0
+        currState = 0
 
         output = open("output.txt", "w+")  # creates an output file
         data = file.read()
-        sentencesBank = data.splitlines()  # parses data into a list of sentences
-        for sentences in sentencesBank:  # puts list of sentences into a single sentence
-            for a in range(len(sentences)):  # Parses the sentence into individual chars
-                char = sentences[a]
-                if currentstate != 4:  # make sure the current state is not a comment
-                    currentstate = testChar(char, currentstate)
-                    if currentstate == 0:
+        sentences = data.splitlines()  # parses data into a list of sentences
+        for sen in sentences:  # puts list of sentences into a single sentence
+            for a in range(len(sen)):  # Parses the sentence into individual chars
+                char = sen[a]
+                if currState != 4:  # make sure the current state is not a comment
+                    currState = testChar(char, currState)
+                    if currState == 0:
                         showTemp(temp, output)
                         showChar(char, output)
                         temp = ""
 
-                    elif currentstate == 1 or currentstate == 2 or currentstate == 3:
+                    elif currState == 1 or currState == 2 or currState == 3:
                         # our current states allows us to add a character to our word
                         temp += char
 
-                    elif currentstate == 4:  # our current state checks what temp is
+                    elif currState == 4:  # our current state checks what temp is
                         showTemp(temp, output)
                         temp = ""
 
-                    elif currentstate == 5:  # checks if we get an invalid word
+                    elif currState == 5:  # checks if we get an invalid word
                         showTemp(temp, output)
                         showChar(char, output)
                         temp = ""
 
-                elif (char == "!") and (currentstate == 4):
-                    currentstate = statetable[currentstate][2]
+                elif (char == "!") and (currState == 4):
+                    currState = statetable[currState][2]
 
     showTemp(temp, output)
     output.close()  # closes output file

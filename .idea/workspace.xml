@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9414469e-aa09-45b7-9831-73ef5f2143c5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/SampleInputFile.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/CompilierProject1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CompilierProject1.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CPSC323-BAbid-SMoustapha-Final-Assignment1.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lexer.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lexer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SampleInputFile2.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output.txt" beforeDir="false" afterPath="$PROJECT_DIR$/output.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lexer.py" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -55,7 +51,28 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.CPSC323-BAbid-SMoustapha-Final-Assignment1">
+    <configuration name="CPSC323-BAbid-SMoustapha-Final-Assignment1" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="CompilierProject1" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/CPSC323-BAbid-SMoustapha-Final-Assignment1.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="Lexer" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="CompilierProject1" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -79,6 +96,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.CPSC323-BAbid-SMoustapha-Final-Assignment1" />
         <item itemvalue="Python.Lexer" />
       </list>
     </recent_temporary>
@@ -94,6 +112,14 @@
       <option name="presentableId" value="Default" />
       <updated>1569689104161</updated>
     </task>
+    <task id="LOCAL-00001" summary="Cleaned code and debugged certain issues">
+      <created>1569720446757</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1569720446757</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -111,5 +137,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Cleaned code and debugged certain issues" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cleaned code and debugged certain issues" />
   </component>
 </project>
